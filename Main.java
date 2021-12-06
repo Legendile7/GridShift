@@ -24,13 +24,18 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Version Beta 1.7.8 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Version Beta 1.7.9 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
       String message = scam.nextLine();
       message = message.toLowerCase();
       message = message.replaceAll("\\p{Punct}", "*");
+      System.out.print("Remove punctuation (y/n)? ");
+      String punc = scam.nextLine();
+      if (punc.equals("n")){
+        message = message.replaceAll("*", "");
+      }
       System.out.println("Enter the key (<key>/auto):");
       String key = scam.nextLine();
       if (key.equals("auto")){
