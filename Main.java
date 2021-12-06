@@ -2,11 +2,9 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
-/*
 import java.awt.datatransfer.StringSelection;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
-*/
 class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
@@ -26,7 +24,7 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Version Repl.it Beta 1.7.8 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWARNING: Clipboard does not function on Repl.it\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Version Beta 1.7.8 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
@@ -195,10 +193,10 @@ class Main {
         }
         System.out.println("Finished! Fetching...");
         System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + cipher + ":" + key + "\n\nCopied to clipboard!");
-        /*String export = cipher + ":" + key;
+        String export = cipher + ":" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);*/
+        clipboard.setContents(stringSelection, null);
       }
       else{
         System.out.println("Using key: " + key);
@@ -380,10 +378,10 @@ class Main {
         }
         System.out.println("Finished! Fetching...");
         System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + cipher + ":" + key + "\n\nCopied to clipboard!");
-        /*String export = cipher + ":" + key;
+        String export = cipher + ":" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);*/
+        clipboard.setContents(stringSelection, null);
       }
     }
     else if (operation.equals("d")){
@@ -571,10 +569,10 @@ class Main {
       } 
       System.out.println("Finished! Fetching...");
       System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + message + ":" + key + "\n\nCopied to clipboard!");
-      /*String export = message + ":" + key;
+      String export = message + ":" + key;
       StringSelection stringSelection = new StringSelection(export);
       Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-      clipboard.setContents(stringSelection, null);*/
+      clipboard.setContents(stringSelection, null);
     }
     else if (operation.equals("help")){
       System.out.println("\nThis program is an cryptographic encryption algorithm that converts a message into ciphertext with a key.\n\nStart by encrypting (e), type your message and press enter.\nIf you know how to make a key, type the key.\nOtherwise, type auto.\nTo make a key, combine these 3 parts:\n> Grid size (1-99)\n> Direction (uu, dd, lu, ru, ld, rd)\n> Start number (0 to [Grid size squared - 1])\nExample key: 77dd540\nAfter you have entered the key, wait for the program to encrypt your message. Copy and save the Ciphertext AND Key.\n\nTo decrypt, run the program and type (d).\nThen type the ciphertext you encrypted before with the encrypt function.\nThen type the key you used to encrypt the message.\nPress enter and you should have your original message.\n\nRun the program again to get started!");
