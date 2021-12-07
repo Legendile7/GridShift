@@ -1,6 +1,6 @@
 GridShift Cipher Version Beta 1.7.9
 
-Created by Divesh Gupta. All rights reserved. For non-commercial use only.
+Created by Divesh Gupta. All rights reserved.
 
 
 [PREREQUISITES]
