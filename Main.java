@@ -575,7 +575,7 @@ class Main {
         two++;
       } 
       System.out.println("Finished! Fetching...");
-      System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + message + ":" + key + "\n\nCopied to clipboard!");
+      System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + message + ":" + key);
       String export = message + ":" + key;
       StringSelection stringSelection = new StringSelection(export);
       Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
