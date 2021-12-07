@@ -8,11 +8,11 @@ import java.awt.datatransfer.Clipboard;
 class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
-    String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    String ralphabet = "ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba";
-    String numbers = "0123456789";
-    String rnumbers = "9876543210";
-    String symbols = "!@#$%^&*()_-+={[}]|\\:;\"\'<,>.?/`~";
+    String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+`{[}]:;<,>.?/|";
+    String ralphabet = "|/?.>,<;:]}[{`+=_-)(*&^%$#@!9876543210ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba";
+    String numbers = "\'";
+    String rnumbers = "\'";
+    String symbols = "\'";
     String plain = "";
     String cipher = "";
     String start2 = "";
@@ -24,19 +24,11 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Cipher 1.8.1-beta (December 7, 2021)\nCopyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Cipher 1.9.0-beta (December 7, 2021)\nCopyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
       String message = scam.nextLine();
-      message = message.replaceAll("\\p{Punct}", "*");
-      if (message.contains("*")){
-        System.out.print("Remove all punctuation or replace it with \"*\" (remove/replace)? ");
-        String punc = scam.nextLine();
-        if (punc.equals("remove")){
-          message = message.replaceAll("\\p{Punct}", "");
-        }
-      }
       System.out.println("Enter the key (<key>/auto):");
       String key = scam.nextLine();
       if (key.equals("auto")){
@@ -64,9 +56,9 @@ class Main {
           plain = message.substring(0+one, 1+two);
           if (dir == "dd"){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -86,9 +78,9 @@ class Main {
           }
           if (dir == "uu"){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -108,9 +100,9 @@ class Main {
           }
           if (dir == "rd"){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -130,9 +122,9 @@ class Main {
           }
           if (dir == "ld"){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -152,9 +144,9 @@ class Main {
           }
           if (dir == "lu"){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -174,9 +166,9 @@ class Main {
           }
           if (dir == "ru"){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -198,8 +190,8 @@ class Main {
           two++;
         }
         System.out.println("Finished! Fetching...");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + cipher + ":" + key + "\n\nCopied to clipboard!");
-        String export = cipher + ":" + key;
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~, key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
+        String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
@@ -249,9 +241,9 @@ class Main {
           plain = message.substring(0+one, 1+two);
           if (dir.equals("dd")){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -271,9 +263,9 @@ class Main {
           }
           if (dir.equals("uu")){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -293,9 +285,9 @@ class Main {
           }
           if (dir.equals("rd")){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -315,9 +307,9 @@ class Main {
           }
           if (dir.equals("ld")){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -337,9 +329,9 @@ class Main {
           }
           if (dir.equals("lu")){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -359,9 +351,9 @@ class Main {
           }
           if (dir.equals("ru")){
             index = ralphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -383,8 +375,8 @@ class Main {
           two++;
         }
         System.out.println("Finished! Fetching...");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + cipher + ":" + key + "\n\nCopied to clipboard!");
-        String export = cipher + ":" + key;
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~, key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
+        String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
@@ -438,9 +430,9 @@ class Main {
         plain = message.substring(0+one, 1+two);
         if (dir.equals("dd")){
           index = ralphabet.indexOf(plain);
-          randStart %= 52;
+          randStart %= 90;
           index += randStart;
-          index %= 52;
+          index %= 90;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -460,9 +452,9 @@ class Main {
         }
         if (dir.equals("uu")){
           index = alphabet.indexOf(plain);
-          randStart %= 52;
+          randStart %= 90;
           index += randStart;
-          index %= 52;
+          index %= 90;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -482,9 +474,9 @@ class Main {
         }
         if (dir.equals("rd")){
           index = ralphabet.indexOf(plain);
-          randStart %= 52;
+          randStart %= 90;
           index += randStart;
-          index %= 52;
+          index %= 90;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -504,9 +496,9 @@ class Main {
         }
         if (dir.equals("ld")){
           index = ralphabet.indexOf(plain);
-          randStart %= 52;
+          randStart %= 90;
           index += randStart;
-          index %= 52;
+          index %= 90;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -527,9 +519,9 @@ class Main {
         }
         if (dir.equals("lu")){
           index = alphabet.indexOf(plain);
-          randStart %= 52;
+          randStart %= 90;
           index += randStart;
-          index %= 52;
+          index %= 90;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
             cipher += alphabet.substring(index, index+1);
@@ -549,9 +541,9 @@ class Main {
           }
           if (dir.equals("ru")){
             index = alphabet.indexOf(plain);
-            randStart %= 52;
+            randStart %= 90;
             index += randStart;
-            index %= 52;
+            index %= 90;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -573,11 +565,7 @@ class Main {
         two++;
       } 
       System.out.println("Finished! Fetching...");
-      System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key + "\n\nExport:\n" + message + ":" + key);
-      String export = message + ":" + key;
-      StringSelection stringSelection = new StringSelection(export);
-      Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-      clipboard.setContents(stringSelection, null);
+      System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key);
     }
     else if (operation.equals("help")){
       System.out.println("\nThis program is an cryptographic encryption algorithm that converts a message into ciphertext with a key.\n\nStart by encrypting (e), type your message and press enter.\nIf you know how to make a key, type the key.\nOtherwise, type auto.\nTo make a key, combine these 3 parts:\n> Grid size (1-99)\n> Direction (uu, dd, lu, ru, ld, rd)\n> Start number (0 to [Grid size squared - 1])\nExample key: 77dd540\nAfter you have entered the key, wait for the program to encrypt your message. Copy and save the Ciphertext AND Key.\n\nTo decrypt, run the program and type (d).\nThen type the ciphertext you encrypted before with the encrypt function.\nThen type the key you used to encrypt the message.\nPress enter and you should have your original message.\n\nRun the program again to get started!");
