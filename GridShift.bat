@@ -1,3 +1,4 @@
+COLOR 0b
 @echo off
 cls
 :start
