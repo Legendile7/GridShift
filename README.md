@@ -1,4 +1,6 @@
-![GridShift Cipher 1.9.1-beta](https://drive.google.com/file/d/1stZIUZuieTcbsrAA8e1R186rMS33mgRg/preview)
+![GridShift](https://lh6.googleusercontent.com/okZWayj3MKF7vbyPoBKE9p_s1bie5nU_4cL8mSEa2c5KV2pXhbS6XyWVKnTp-nho1npBxwnwyqpjOgrUZo0j=w1920-h853)
+
+GridShift Cipher 1.9.1-beta
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
