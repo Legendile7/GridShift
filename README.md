@@ -37,7 +37,7 @@ Type help for the instructions.
 
 ## [ERRORS]
  - If you get a java is not recognized error, make sure Java is in environment variables. If you have no idea what this means, Google it up.
- - If you can't fix the errors, you can try the lite version here which is compatible with the full version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
+ - If you come across any errors you cannot fix, you can try the lite version here (does not have all features): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
 Happy Encrypting!
