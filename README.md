@@ -26,4 +26,8 @@ After starting the program, the program will ask you to encrypt or decrypt.
 Type help for the instructions.
 
 
+[ERRORS]
+ - If you get a java is not recognized error, make sure Java is in environment variables. If you have no idea what this means, Google it up.
+
+
 Happy Encrypting!
