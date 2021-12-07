@@ -31,10 +31,12 @@ class Main {
       String message = scam.nextLine();
       message = message.toLowerCase();
       message = message.replaceAll("\\p{Punct}", "*");
-      System.out.print("Remove punctuation (y/n)? ");
-      String punc = scam.nextLine();
-      if (punc.equals("n")){
-        message = message.replaceAll("*", "");
+      if (message.contains("*")){
+        System.out.print("Punctuation replaced with *\nWould you like to remove it (y/n)? ");
+        String punc = scam.nextLine();
+        if (punc.equals("y")){
+          message = message.replaceAll("\\p{Punct}", "");
+        }
       }
       System.out.println("Enter the key (<key>/auto):");
       String key = scam.nextLine();
