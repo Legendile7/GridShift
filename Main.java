@@ -24,16 +24,16 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Cipher Version 1.8.0-beta (December 6, 2021)\nCopyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Cipher 1.8.1-beta (December 6, 2021)\nCopyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
       String message = scam.nextLine();
       message = message.replaceAll("\\p{Punct}", "*");
       if (message.contains("*")){
-        System.out.print("Punctuation replaced with *\nWould you like to remove it (y/n)? ");
+        System.out.print("Would you like to remove all punctuation or replace it with \"*\" (remove/replace)? ");
         String punc = scam.nextLine();
-        if (punc.equals("y")){
+        if (punc.equals("remove")){
           message = message.replaceAll("\\p{Punct}", "");
         }
       }
