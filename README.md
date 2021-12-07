@@ -23,6 +23,7 @@ Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-b
 1. Extract the zip file if you have not already done so
 2. Open the extracted folder
 3. Launch GridShift.bat
+4. If you get a pop up that says "Windows protected your PC", click on More Info and then click Run Anyway. This program is completely safe but if you're suspicious, you can explore the source code for anything malicious.
 
 
 [ENCRYPTION/DECRYPTION INSTRUCTIONS]
