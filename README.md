@@ -1,6 +1,7 @@
-GridShift Cipher Version Beta 1.7.10
+GridShift Cipher Version Beta 1.8.0
 
-Created by Divesh Gupta. All rights reserved.
+GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
 
 [PREREQUISITES]
