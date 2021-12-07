@@ -8,8 +8,8 @@ import java.awt.datatransfer.Clipboard;
 class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
-    String alphabet = "abcdefghijklmnopqrstuvwxyz";
-    String ralphabet = "zyxwvutsrqponmlkjihgfedcba";
+    String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String ralphabet = "ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba";
     String numbers = "0123456789";
     String rnumbers = "9876543210";
     String symbols = "!@#$%^&*()_-+={[}]|\\:;\"\'<,>.?/`~";
@@ -24,12 +24,11 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Version Beta 1.7.10 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Cipher Version 1.8.0-beta (December 6, 2021)\nCopyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
       String message = scam.nextLine();
-      message = message.toLowerCase();
       message = message.replaceAll("\\p{Punct}", "*");
       if (message.contains("*")){
         System.out.print("Punctuation replaced with *\nWould you like to remove it (y/n)? ");
@@ -65,9 +64,9 @@ class Main {
           plain = message.substring(0+one, 1+two);
           if (dir == "dd"){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -87,9 +86,9 @@ class Main {
           }
           if (dir == "uu"){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -109,9 +108,9 @@ class Main {
           }
           if (dir == "rd"){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -131,9 +130,9 @@ class Main {
           }
           if (dir == "ld"){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -153,9 +152,9 @@ class Main {
           }
           if (dir == "lu"){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -175,9 +174,9 @@ class Main {
           }
           if (dir == "ru"){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -250,9 +249,9 @@ class Main {
           plain = message.substring(0+one, 1+two);
           if (dir.equals("dd")){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -272,9 +271,9 @@ class Main {
           }
           if (dir.equals("uu")){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -294,9 +293,9 @@ class Main {
           }
           if (dir.equals("rd")){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -316,9 +315,9 @@ class Main {
           }
           if (dir.equals("ld")){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -338,9 +337,9 @@ class Main {
           }
           if (dir.equals("lu")){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -360,9 +359,9 @@ class Main {
           }
           if (dir.equals("ru")){
             index = ralphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -394,7 +393,6 @@ class Main {
     else if (operation.equals("d")){
       System.out.println("Enter message to decrypt (letters and numbers only): ");
       String message = scam.nextLine();
-      message = message.toLowerCase();
       System.out.println("Enter the key:");
       String key = scam.nextLine();
       System.out.println("Using key: " + key);
@@ -440,9 +438,9 @@ class Main {
         plain = message.substring(0+one, 1+two);
         if (dir.equals("dd")){
           index = ralphabet.indexOf(plain);
-          randStart %= 26;
+          randStart %= 52;
           index += randStart;
-          index %= 26;
+          index %= 52;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -462,9 +460,9 @@ class Main {
         }
         if (dir.equals("uu")){
           index = alphabet.indexOf(plain);
-          randStart %= 26;
+          randStart %= 52;
           index += randStart;
-          index %= 26;
+          index %= 52;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
@@ -484,9 +482,9 @@ class Main {
         }
         if (dir.equals("rd")){
           index = ralphabet.indexOf(plain);
-          randStart %= 26;
+          randStart %= 52;
           index += randStart;
-          index %= 26;
+          index %= 52;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -506,9 +504,9 @@ class Main {
         }
         if (dir.equals("ld")){
           index = ralphabet.indexOf(plain);
-          randStart %= 26;
+          randStart %= 52;
           index += randStart;
-          index %= 26;
+          index %= 52;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += ralphabet.substring(index, index+1);
@@ -529,9 +527,9 @@ class Main {
         }
         if (dir.equals("lu")){
           index = alphabet.indexOf(plain);
-          randStart %= 26;
+          randStart %= 52;
           index += randStart;
-          index %= 26;
+          index %= 52;
           if (!plain.equals(" ")){
             if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
             cipher += alphabet.substring(index, index+1);
@@ -551,9 +549,9 @@ class Main {
           }
           if (dir.equals("ru")){
             index = alphabet.indexOf(plain);
-            randStart %= 26;
+            randStart %= 52;
             index += randStart;
-            index %= 26;
+            index %= 52;
             if (!plain.equals(" ")){
               if (numbers.indexOf(plain) == -1 && symbols.indexOf(plain) == -1){
               cipher += alphabet.substring(index, index+1);
