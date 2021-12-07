@@ -1,4 +1,4 @@
-GridShift Cipher 1.9.1-beta
+# GridShift Cipher 1.9.1-beta
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
@@ -10,15 +10,15 @@ GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
 Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
-[PREREQUISITES]
+## [PREREQUISITES]
  - Latest Java SE Development Kit
 
 
-[INSTALLATION]
+## [INSTALLATION]
 1. Go to latest release and download source code.
 
 
-[PROGRAM RUN INSTRUCTIONS]
+## [PROGRAM RUN INSTRUCTIONS]
 
 1. Extract the zip file if you have not already done so
 2. Open the extracted folder
@@ -26,14 +26,14 @@ Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-b
 4. If you get a pop up that says "Windows protected your PC", click on More Info and then click Run Anyway. This program is completely safe but if you're suspicious, you can explore the source code for anything malicious.
 
 
-[ENCRYPTION/DECRYPTION INSTRUCTIONS]
+## [ENCRYPTION/DECRYPTION INSTRUCTIONS]
 
 Encryption and Decryption Instructions are built into the program.
 After starting the program, the program will ask you to encrypt or decrypt. 
 Type help for the instructions.
 
 
-[ERRORS]
+## [ERRORS]
  - If you get a java is not recognized error, make sure Java is in environment variables. If you have no idea what this means, Google it up.
  - If you can't fix the errors, you can try the lite version here which is compatible with the full version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
