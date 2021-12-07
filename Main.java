@@ -24,7 +24,7 @@ class Main {
     int grid = 0;
     int modifier = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Version Beta 1.7.9 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Version Beta 1.7.10 (December 6, 2021)\nCreated by Divesh Gupta. All rights reserved.\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt (letters and numbers only): ");
