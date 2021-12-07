@@ -1,4 +1,4 @@
-![GridShift](https://lh6.googleusercontent.com/okZWayj3MKF7vbyPoBKE9p_s1bie5nU_4cL8mSEa2c5KV2pXhbS6XyWVKnTp-nho1npBxwnwyqpjOgrUZo0j=w1920-h853)
+![GridShift](https://i.ibb.co/NZhLQMM/Grid-Shift.png)
 
 GridShift Cipher 1.9.1-beta
 
