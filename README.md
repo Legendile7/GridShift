@@ -6,6 +6,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
 GridShift is a custom and original cryptographic encryption system for text! It is currently in beta to test and see if it really is secure.
 
 GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
+
 Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
