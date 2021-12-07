@@ -1,4 +1,4 @@
-//By Divesh Gupta, All Rights Reserved.
+//By Divesh Gupta
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
