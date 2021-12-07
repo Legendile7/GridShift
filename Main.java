@@ -31,7 +31,7 @@ class Main {
       String message = scam.nextLine();
       message = message.replaceAll("\\p{Punct}", "*");
       if (message.contains("*")){
-        System.out.print("Would you like to remove all punctuation or replace it with \"*\" (remove/replace)? ");
+        System.out.print("Remove all punctuation or replace it with \"*\" (remove/replace)? ");
         String punc = scam.nextLine();
         if (punc.equals("remove")){
           message = message.replaceAll("\\p{Punct}", "");
