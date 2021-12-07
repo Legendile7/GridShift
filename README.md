@@ -1,4 +1,4 @@
-GridShift Cipher 1.8.0-beta
+GridShift Cipher 1.8.1-beta
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
