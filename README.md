@@ -7,6 +7,10 @@ Created by Divesh Gupta. All rights reserved.
  - Latest Java SE Development Kit
 
 
+[INSTALLATION]
+1. Go to latest release and download source code.
+
+
 [PROGRAM RUN INSTRUCTIONS]
 
 1. Extract the zip file if you have not already done so
