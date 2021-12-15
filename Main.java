@@ -171,7 +171,7 @@ public class Main {
         randstartS += start2;
         randstart = Integer.parseInt(randstartS);
       }catch (Exception e) {
-        System.out.println("Detected 1 digit starting number or incorrect key. Encryption may fail.");
+        System.out.println("Detected 1 digit starting number or incorrect key. Decryption may fail.");
       }
       try{
         String start3 = key.substring(7+modifier,8+modifier);
