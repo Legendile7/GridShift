@@ -5,7 +5,7 @@ GridShift Cipher 1.10.0
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-GridShift is a custom and original cryptographic encryption system for text! It is currently in beta to test and see if it really is secure.
+GridShift is a custom and original cryptographic encryption system for text-based messages!
 
 GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
 
