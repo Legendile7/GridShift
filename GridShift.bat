@@ -6,6 +6,6 @@ echo.
 java Main.java
 echo.
 set choice=
-set /p choice="Enter key to exit or r to restart: "
+set /p choice="Press Enter to exit or r + Enter to restart: "
 if not '%choice%'=='' set choice=%choice:~0,1%
 if '%choice%'=='r' goto start
