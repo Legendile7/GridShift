@@ -1,6 +1,6 @@
 ![GridShift](https://i.ibb.co/NZhLQMM/Grid-Shift.png)
 
-GridShift Cipher 1.9.2-beta
+GridShift Cipher 1.10.0
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
@@ -13,7 +13,7 @@ Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-b
 
 
 ## [PREREQUISITES]
- - Latest Java SE Development Kit
+ - Latest Java SE Development Kit (Tested with JDK 11)
 
 
 ## [INSTALLATION]
@@ -36,7 +36,7 @@ Type help for the instructions.
 
 
 ## [ERRORS]
- - If you get a java is not recognized error, make sure Java is in environment variables. If you have no idea what this means, Google it up.
+ - If you get a java is not recognized error, make sure Java is installed and is in environment variables. If you have no idea what this means, Google it up.
  - If you come across any errors you cannot fix, you can try the lite version here (does not have all features): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
