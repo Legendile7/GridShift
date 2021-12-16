@@ -1,4 +1,4 @@
-//GridShift Cipher 1.10.1 (December 15, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
+//GridShift Cipher 1.10.1 (December 16, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
