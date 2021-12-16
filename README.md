@@ -9,7 +9,7 @@ GridShift is a custom and original cryptographic encryption system for text-base
 
 GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
 
-Repl.it Lite Version: https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
+Repl.it Lite Version (currently only compatible with v1.8-beta series): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
 ## [PREREQUISITES]
@@ -33,7 +33,7 @@ Type help for the instructions.
 
 ## [ERRORS]
  - If you get a java is not recognized error, make sure Java is installed and is in environment variables. If you have no idea what this means, Google it up.
- - If you come across any errors you cannot fix, you can try the lite version here (does not have all features): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
+ - If you come across any errors you cannot fix, you can try the lite version here (does not have all features and incompatible with this version series): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
 
 Happy Encrypting!
