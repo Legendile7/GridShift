@@ -66,7 +66,7 @@ public class Main {
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~ and key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~ and Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
         String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -136,7 +136,7 @@ public class Main {
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~, key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~, Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
         String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
