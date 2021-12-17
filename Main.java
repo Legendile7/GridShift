@@ -220,5 +220,4 @@ public class Main {
       System.out.println("Error! Could not find command: " + operation + "\nPlease run the program again!");
     }
   }
-}  }
 }
