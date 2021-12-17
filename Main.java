@@ -42,13 +42,11 @@ public class Main {
         }
         String dir = Integer.toString(dirInt);
         key = grid + "(" + reverse + dir + ")" + randstart;
-        System.out.println("Key generated: " + key);
-        System.out.println("Creating Grid...");
+        System.out.println("Key Generated: " + key);
         List<Integer> numList = new ArrayList<>();
         for (int i = 0; i < gridSqr+1; i++){
           numList.add(i);
         }
-        System.out.println("[0, 1, 2, 3..." + (int)gridSqr + "]");
         System.out.println("Encrypting...");
         for (int i = 0; i < message.length(); i++){
           plain = message.substring(0+i, 1+i);
@@ -67,8 +65,8 @@ public class Main {
           }
           randstart += grid+dirInt;
         }
-        System.out.println("Finished! Fetching...");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~, key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
+        System.out.println("Finished!");
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~ and key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
         String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -115,12 +113,10 @@ public class Main {
         if (randstart <= gridSqr){
           key = grid + "(" + reverse + dir + ")" + randstart;
         }
-        System.out.println("Creating Grid...");
         List<Integer> numList = new ArrayList<>();
         for (int i = 0; i < gridSqr+1; i++){
           numList.add(i);
         }
-        System.out.println("[0, 1, 2, 3..." + (int)gridSqr + "]");
         System.out.println("Encrypting...");
         for (int i = 0; i < message.length(); i++){
           plain = message.substring(0+i, 1+i);
@@ -139,7 +135,7 @@ public class Main {
           }
           randstart += grid+dirInt;
         }
-        System.out.println("Finished! Fetching...");
+        System.out.println("Finished!");
         System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (message is before ~, key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
         String export = cipher + "~" + key;
         StringSelection stringSelection = new StringSelection(export);
@@ -191,12 +187,10 @@ public class Main {
       if (randstart <= gridSqr){
         key = grid + "(" + reverse + dir + ")" + randstart;
       }
-      System.out.println("Creating Grid...");
       List<Integer> numList = new ArrayList<>();
       for (int i = 0; i < gridSqr+1; i++){
         numList.add(i);
       }
-      System.out.println("[0, 1, 2, 3..." + (int)gridSqr + "]");
       System.out.println("Encrypting...");
       for (int i = 0; i < message.length(); i++){
         plain = message.substring(0+i, 1+i);
@@ -215,7 +209,7 @@ public class Main {
         }
         randstart += grid+dirInt;
       }
-      System.out.println("Finished! Fetching...");
+      System.out.println("Finished!");
       System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key);
     }
     else if (operation.equals("help")){
@@ -226,4 +220,5 @@ public class Main {
       System.out.println("Error! Could not find command: " + operation + "\nPlease run the program again!");
     }
   }
+}  }
 }
