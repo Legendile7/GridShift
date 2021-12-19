@@ -152,7 +152,7 @@ public class Main {
       }
     }
     else if (operation.equals("d")){
-      System.out.println("Enter message to decrypt (letters and numbers only): ");
+      System.out.println("Enter message to decrypt: ");
       String message = scam.nextLine();
       if (message.contains("~")){
         System.out.println("Key detected!");
