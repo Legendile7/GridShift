@@ -152,7 +152,7 @@ public class Main {
       }
     }
     else if (operation.equals("d")){
-      System.out.println("Enter message to decrypt: ");
+      System.out.println("Enter Ciphertext or Export text to decrypt: ");
       String message = scam.nextLine();
       if (message.contains("~")){
         System.out.println("Key detected!");
@@ -227,7 +227,7 @@ public class Main {
       System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key);
     }
     else if (operation.equals("help")){
-      System.out.println("\nThis program is an cryptographic encryption algorithm that converts a message into ciphertext with a key.\n\nEncrypt (e)\n Type the message and press Enter.\nEnter the key or type auto and press Enter.\n\nTo make a key, combine these 5 parts:\n> Grid size (1-99)\n> Open Parenthesis: (\n> Grid Advancement (Any two digit negative or positive number with sign +/- before number)\n> Closed Parenthesis: )\n> Start number (0 to [Grid size squared - 1])\nExample key: 77(+98)540\nAnother Example: 34(-05)25\n\nAfter entering the key, wait for the program to encrypt your message. The program will automatically copy the text under Export and save to Clipboard. The Export includes the message and the key seperated by ~\nThis symbol is NOT part of the message OR the key.\n\n\nDecrypt (d)\nType the ciphertext encrypted with the encrypt function and press Enter.\nType the key used to encrypt the message.\nPress Enter and you now have the original message.\n\nRun the program again to get started!");
+      System.out.println("\nThis program is an cryptographic encryption algorithm that converts a message into ciphertext with a key.\n\nEncrypt (e)\n Type the message and press Enter.\nEnter the key or type auto and press Enter.\n\nTo make a key, combine these 5 parts:\n> Grid size (1-99)\n> Open Parenthesis: (\n> Grid Advancement (Any two digit negative or positive number with sign +/- before number)\n> Closed Parenthesis: )\n> Start number (0 to [Grid size squared - 1])\nExample key: 77(+98)540\nAnother Example: 34(-05)25\n\nAfter entering the key, wait for the program to encrypt your message. The program will automatically copy the text under Export and save to Clipboard. The Export includes the message and the key seperated by ~\n\n\nDecrypt (d)\nType the ciphertext encrypted with the encrypt function or the Export value from the Encryption function and press Enter.\nIf you typed the Export text, the decryption will happen. Otherwise, type the key used to encrypt the message.\nPress Enter and you now have the original message.\n\nRun the program again to get started!");
     }
     else if (operation.equals("exit")){}
     else{
