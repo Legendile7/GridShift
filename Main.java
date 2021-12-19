@@ -1,4 +1,4 @@
-//GridShift Cipher 1.10.2 (December 17, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
+//GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
@@ -15,18 +15,26 @@ public class Main {
     String plain = "";
     String cipher = "";
     String reverse = "";
+    String key = "";
     int index = 0;
     int grid = 0;
     int modifier = 0;
     int dirInt = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Cipher 1.10.2 (December 17, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt: ");
       String message = scam.nextLine();
-      System.out.println("Enter the key (<key>/auto):");
-      String key = scam.nextLine();
+      if (message.contains("~")){
+        System.out.println("Key detected in message!");
+        int kIndex = message.indexOf("~");
+        key = message.substring(kIndex+1, message.length());
+        message = message.substring(0,kIndex);
+      }else{
+        System.out.println("Enter the key (<key>/auto):");
+        key = scam.nextLine();
+      }
       if (key.equals("auto")){
         System.out.println("Generating Key...");
         grid = (int)(Math.random() * 90 + 10);
@@ -146,9 +154,15 @@ public class Main {
     else if (operation.equals("d")){
       System.out.println("Enter message to decrypt (letters and numbers only): ");
       String message = scam.nextLine();
-      System.out.println("Enter the key:");
-      String key = scam.nextLine();
-      System.out.println("Using key: " + key);
+      if (message.contains("~")){
+        System.out.println("Key detected!");
+        int kIndex = message.indexOf("~");
+        key = message.substring(kIndex+1, message.length());
+        message = message.substring(0,kIndex);
+      }else{
+        System.out.println("Enter the key (<key>/auto):");
+        key = scam.nextLine();
+      }
       String gridS = key.substring(0,1);
       try{
         grid = Integer.parseInt(key.substring(1,2));
@@ -191,7 +205,7 @@ public class Main {
       for (int i = 0; i < gridSqr+1; i++){
         numList.add(i);
       }
-      System.out.println("Encrypting...");
+      System.out.println("Decrypting...");
       for (int i = 0; i < message.length(); i++){
         plain = message.substring(0+i, 1+i);
         if(reverse.equals("-")){
