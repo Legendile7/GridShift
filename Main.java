@@ -21,7 +21,7 @@ public class Main {
     int modifier = 0;
     int dirInt = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nWould you like to encrypt or decrypt (e/d/help/exit)? ");
+    System.out.print("GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nEnter Command (e/d/help/exit): ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt: ");
