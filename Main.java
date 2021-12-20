@@ -1,4 +1,4 @@
-//GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
+//GridShift Cipher 1.10.4 (December 20, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
@@ -8,7 +8,7 @@ import java.awt.datatransfer.Clipboard;
 public class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
-    String alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|~ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     StringBuilder sb=new StringBuilder(alphabet);
     StringBuilder ralphabet1 = sb.reverse();
     String ralphabet = ralphabet1.toString();
@@ -21,17 +21,21 @@ public class Main {
     int modifier = 0;
     int dirInt = 0;
     double gridSqr = 0;
-    System.out.print("GridShift Cipher 1.10.3 (December 19, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nEnter Command (e/d/help/exit): ");
+    System.out.print("GridShift Cipher 1.10.4 (December 20, 2021) Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/\nEnter Command (e/d/help/exit): ");
     String operation = scam.nextLine();
     if (operation.equals("e")){
       System.out.println("Enter message to encrypt: ");
       String message = scam.nextLine();
-      if (message.contains("~")){
+      if (message.contains("\u27eb") || (message.contains("~") && !message.contains("\u27eb"))){
         System.out.println("Key detected in message!");
-        int kIndex = message.indexOf("~");
+        try{
+          int kIndex = message.indexOf("\u27eb");
+        }catch (Exception old){
+          int kIndex = message.indexOf("~");
+        }
         key = message.substring(kIndex+1, message.length());
         message = message.substring(0,kIndex);
-      }else{
+      }else if (!message.contains("\u27eb") && !message.contains("~")){
         System.out.println("Enter the key (<key>/auto):");
         key = scam.nextLine();
       }
@@ -60,22 +64,22 @@ public class Main {
           plain = message.substring(0+i, 1+i);
           if(reverse == "-"){
             index = ralphabet.indexOf(plain);
-            randstart %= 93;
+            randstart %= 94;
             index += randstart;
-            index %= 93;
+            index %= 94;
             cipher += ralphabet.substring(index, index+1);
           }else if(reverse.equals("+")){
             index = alphabet.indexOf(plain);
-            randstart %= 93;
+            randstart %= 94;
             index += randstart;
-            index %= 93;
+            index %= 94;
             cipher += alphabet.substring(index, index+1);
           }
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~ and Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
-        String export = cipher + "~" + key;
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before \u27eb and Key is after \u27eb):\n" + cipher + "\u27eb" + key + "\n\nCopied to clipboard!");
+        String export = cipher + "\u27eb" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
@@ -130,22 +134,22 @@ public class Main {
           plain = message.substring(0+i, 1+i);
           if(reverse.equals("-")){
             index = ralphabet.indexOf(plain);
-            randstart %= 93;
+            randstart %= 94;
             index += randstart;
-            index %= 93;
+            index %= 94;
             cipher += ralphabet.substring(index, index+1);
           }else if(reverse.equals("+")){
             index = alphabet.indexOf(plain);
-            randstart %= 93;
+            randstart %= 94;
             index += randstart;
-            index %= 93;
+            index %= 94;
             cipher += alphabet.substring(index, index+1);
           }
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~, Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
-        String export = cipher + "~" + key;
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before \u27eb, Key is after \u27eb):\n" + cipher + "\u27eb" + key + "\n\nCopied to clipboard!");
+        String export = cipher + "\u27eb" + key;
         StringSelection stringSelection = new StringSelection(export);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
@@ -154,13 +158,17 @@ public class Main {
     else if (operation.equals("d")){
       System.out.println("Enter Ciphertext or Export text to decrypt: ");
       String message = scam.nextLine();
-      if (message.contains("~")){
-        System.out.println("Key detected!");
-        int kIndex = message.indexOf("~");
+      if (message.contains("\u27eb") || (message.contains("~") && !message.contains("\u27eb"))){
+        System.out.println("Key detected in message!");
+        try{
+          int kIndex = message.indexOf("\u27eb");
+        }catch (Exception old){
+          int kIndex = message.indexOf("~");
+        }
         key = message.substring(kIndex+1, message.length());
         message = message.substring(0,kIndex);
-      }else{
-        System.out.println("Enter the key (<key>/auto):");
+      }else if (!message.contains("\u27eb") && !message.contains("~")){
+        System.out.println("Enter the key (<key>):");
         key = scam.nextLine();
       }
       String gridS = key.substring(0,1);
@@ -210,15 +218,15 @@ public class Main {
         plain = message.substring(0+i, 1+i);
         if(reverse.equals("-")){
           index = alphabet.indexOf(plain);
-          randstart %= 93;
+          randstart %= 94;
           index += randstart;
-          index %= 93;
+          index %= 94;
           cipher += alphabet.substring(index, index+1);
         }else if(reverse.equals("+")){
           index = ralphabet.indexOf(plain);
-          randstart %= 93;
+          randstart %= 94;
           index += randstart;
-          index %= 93;
+          index %= 94;
           cipher += ralphabet.substring(index, index+1);
         }
         randstart += grid+dirInt;
