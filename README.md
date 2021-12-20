@@ -1,11 +1,11 @@
 ![GridShift](https://i.ibb.co/NZhLQMM/Grid-Shift.png)
 
-GridShift Cipher v1.10.3
+GridShift Cipher v1.10.4
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-GridShift is a custom and original cryptographic encryption system for text-based messages!
+GridShift is an original algorithm that encrypts a message using a key.
 
 GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
 
@@ -31,7 +31,7 @@ After starting the program, the program will ask you to encrypt or decrypt.
 Type help for the instructions.
 
 
-## ERRORS
+## FIXING ERRORS
  - If you get a java is not recognized error, make sure Java is installed and is in environment variables. If you have no idea what this means, Google it up.
  - If you come across any errors you cannot fix, you can try the lite version here (does not have all features and incompatible with this version series): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
