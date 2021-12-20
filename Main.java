@@ -8,7 +8,7 @@ import java.awt.datatransfer.Clipboard;
 public class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
-    String alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|~ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     StringBuilder sb=new StringBuilder(alphabet);
     StringBuilder ralphabet1 = sb.reverse();
     String ralphabet = ralphabet1.toString();
@@ -30,6 +30,10 @@ public class Main {
         System.out.println("Key detected in message!");
         try{
           int kIndex = message.indexOf("\u27eb");
+          alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|~ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          StringBuilder sb2=new StringBuilder(alphabet);
+          StringBuilder ralphabet2 = sb2.reverse();
+          ralphabet = ralphabet2.toString();
         }catch (Exception old){
           int kIndex = message.indexOf("~");
         }
@@ -162,6 +166,10 @@ public class Main {
         System.out.println("Key detected in message!");
         try{
           int kIndex = message.indexOf("\u27eb");
+          alphabet = " abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+`{[}]:;\'\"<,>.?/|~ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          StringBuilder sb2=new StringBuilder(alphabet);
+          StringBuilder ralphabet2 = sb2.reverse();
+          ralphabet = ralphabet2.toString();
         }catch (Exception old){
           int kIndex = message.indexOf("~");
         }
