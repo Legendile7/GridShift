@@ -1,6 +1,6 @@
 ![GridShift](https://i.ibb.co/NZhLQMM/Grid-Shift.png)
 
-GridShiftJE (GridShift Java Edition) v1.10.3
+GridShift v1.10.4
 
 GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
@@ -13,7 +13,7 @@ Repl.it Lite Version (currently only compatible with v1.8-beta series): https://
 
 
 ## PREREQUISITES
- - Latest Java SE Development Kit (Tested with JDK 11)
+ - Latest Java SE Development Kit 11
 
 
 ## INSTALLING AND RUNNING
@@ -32,6 +32,7 @@ Type help for the instructions.
 
 
 ## FIXING ERRORS
+ - MAKE SURE JAVA VERSIONS OLDER THAN Java SE Development Kit 11 ARE UNINSTALLED!
  - If you get a java is not recognized error, make sure Java is installed and is in environment variables. If you have no idea what this means, Google it up.
  - If you come across any errors you cannot fix, you can try the lite version here (does not have all features and incompatible with this version series): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
 
