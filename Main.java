@@ -1,4 +1,4 @@
-//GridShift Cipher Copyright 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
+//GridShift Cipher Copyright 2022 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
