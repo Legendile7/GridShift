@@ -2,7 +2,7 @@
 
 GridShift v1.10.4
 
-GridShift Cipher © 2021 by Divesh Gupta is licensed under CC BY-NC-ND 4.0. 
+GridShift Cipher © 2021 by Legendile7 is licensed under CC BY-NC-ND 4.0. 
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/
 
 GridShift is an original algorithm that encrypts a message using a key.
