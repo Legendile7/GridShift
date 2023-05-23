@@ -9,7 +9,7 @@ GridShift is an original algorithm that encrypts a message using a key.
 
 GitHub Repo: https://github.com/Legendile7/GridShift-Cipher
 
-Repl.it Lite Version (currently only compatible with v1.8-beta series): https://replit.com/@Legendile7/GridShift-Cipher-Lite-181-beta?v=1
+Repl.it Lite Version (compatible with v1.10 series): https://replit.com/@Legendile7/GridShift-Cipher-GitHub-Version?v=1
 
 
 ## PREREQUISITES
