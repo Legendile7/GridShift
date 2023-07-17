@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
 public class Main {
   public static void main(String[] args) {
     Scanner scam = new Scanner(System.in);
@@ -74,11 +73,7 @@ public class Main {
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~ and Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
-        String export = cipher + "~" + key;
-        StringSelection stringSelection = new StringSelection(export);
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~ and Key is after ~):\n" + cipher + "~" + key);
       }
       else{
         System.out.println("Using key: " + key);
@@ -144,11 +139,7 @@ public class Main {
           randstart += grid+dirInt;
         }
         System.out.println("Finished!");
-        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~, Key is after ~):\n" + cipher + "~" + key + "\n\nCopied to clipboard!");
-        String export = cipher + "~" + key;
-        StringSelection stringSelection = new StringSelection(export);
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
+        System.out.println("\nPlaintext:\n" + message + "\n\nCiphertext:\n" + cipher + "\n\nKey:\n" + key + "\n\nExport (Ciphertext is before ~, Key is after ~):\n" + cipher + "~" + key);
       }
     }
     else if (operation.equals("d")){
@@ -227,7 +218,7 @@ public class Main {
       System.out.println("\nCiphertext:\n" + message + "\n\nPlaintext:\n"+ cipher + "\n\nKey:\n" + key);
     }
     else if (operation.equals("help")){
-      System.out.println("\nThis program is an original algorithm that encrypts a message using a key.\n\nEncrypt (e)\n Type the message and press Enter.\nEnter the key or type auto and press Enter.\n\nTo make a key, combine these 5 parts:\n> Grid size (1-99)\n> Open Parenthesis: (\n> Grid Advancement (Any two digit negative or positive number with sign +/- before number)\n> Closed Parenthesis: )\n> Start number (0 to [Grid size squared - 1])\nExample key: 77(+98)540\nAnother Example: 34(-05)25\n\nAfter entering the key, wait for the program to encrypt your message. The program will automatically copy the text under Export and save to Clipboard. The Export includes the message and the key seperated by ~\n\n\nDecrypt (d)\nType the ciphertext encrypted with the encrypt function or the Export value from the Encryption function and press Enter.\nIf you typed the Export text, the decryption will happen. Otherwise, type the key used to encrypt the message.\nPress Enter and you now have the original message.\n\nRun the program again to get started!");
+      System.out.println("\nThis program is an original algorithm that encrypts a message using a key.\n\nEncrypt (e)\n Type the message and press Enter.\nEnter the key or type auto and press Enter.\n\nTo make a key, combine these 5 parts:\n> Grid size (1-99)\n> Open Parenthesis: (\n> Grid Advancement (Any two digit negative or positive number with sign +/- before number)\n> Closed Parenthesis: )\n> Start number (0 to [Grid size squared - 1])\nExample key: 77(+98)540\nAnother Example: 34(-05)25\n\nAfter entering the key, wait for the program to encrypt your message. The Export includes the message and the key seperated by ~\n\n\nDecrypt (d)\nType the ciphertext encrypted with the encrypt function or the Export value from the Encryption function and press Enter.\nIf you typed the Export text, the decryption will happen. Otherwise, type the key used to encrypt the message.\nPress Enter and you now have the original message.\n\nRun the program again to get started!");
     }
     else if (operation.equals("exit")){}
     else{
